@@ -1,0 +1,47 @@
+import { RESERVATION_STATUS } from '../utils/constants'
+
+// Seed reservations shared between patient and pharmacy views (demo state).
+export const seedReservations = [
+  {
+    id: 'RSV-3012',
+    code: 'PRX-3012',
+    medicineId: 'MED-004',
+    medicineName: 'ORS Sachets',
+    pharmacyId: 'PH-001',
+    pharmacyName: 'CityMed Pharmacy',
+    patientName: 'Jean-Paul Habimana',
+    patientPhone: '+250 788 431 220',
+    quantity: 5,
+    unitPrice: 400,
+    status: RESERVATION_STATUS.READY,
+    createdAt: new Date(Date.now() - 2 * 3600_000).toISOString(),
+  },
+  {
+    id: 'RSV-3011',
+    code: 'PRX-3011',
+    medicineId: 'MED-003',
+    medicineName: 'Coartem 20/120mg',
+    pharmacyId: 'PH-001',
+    pharmacyName: 'CityMed Pharmacy',
+    patientName: 'Aline Uwase',
+    patientPhone: '+250 788 552 110',
+    quantity: 1,
+    unitPrice: 3200,
+    status: RESERVATION_STATUS.PENDING,
+    createdAt: new Date(Date.now() - 5 * 3600_000).toISOString(),
+  },
+  {
+    id: 'RSV-3008',
+    code: 'PRX-3008',
+    medicineId: 'MED-001',
+    medicineName: 'Paracetamol 500mg',
+    pharmacyId: 'PH-001',
+    pharmacyName: 'CityMed Pharmacy',
+    patientName: 'Eric Mugisha',
+    patientPhone: '+250 788 771 004',
+    quantity: 2,
+    unitPrice: 250,
+    status: RESERVATION_STATUS.COLLECTED,
+    createdAt: new Date(Date.now() - 30 * 3600_000).toISOString(),
+  },
+]
